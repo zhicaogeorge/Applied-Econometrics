@@ -1,4 +1,0 @@
-## Difference In Difference
-
-[TOC]
-
