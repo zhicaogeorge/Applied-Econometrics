@@ -1,0 +1,17 @@
+\contentsline {chapter}{\numberline {1}Regression Discontinuity Designs}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Setup}{1}{section.1.1}% 
+\contentsline {subsection}{\numberline {1.1.1}Basic}{1}{subsection.1.1.1}% 
+\contentsline {subsection}{\numberline {1.1.2}Sharp RD}{2}{subsection.1.1.2}% 
+\contentsline {subsection}{\numberline {1.1.3}Fuzzy RD}{4}{subsection.1.1.3}% 
+\contentsline {section}{\numberline {1.2}Practice}{4}{section.1.2}% 
+\contentsline {subsection}{\numberline {1.2.1}Sharp RD}{4}{subsection.1.2.1}% 
+\contentsline {subsubsection}{Graphical Analyses and Specification Testing}{4}{section*.4}% 
+\contentsline {subsubsection}{Estimation}{6}{section*.5}% 
+\contentsline {subsubsection}{Covariates}{7}{section*.7}% 
+\contentsline {subsubsection}{Bandwidth choice}{8}{section*.8}% 
+\contentsline {subsubsection}{Order of polynomial}{10}{section*.9}% 
+\contentsline {subsection}{\numberline {1.2.2}Fuzzy RD}{11}{subsection.1.2.2}% 
+\contentsline {subsection}{\numberline {1.2.3}Recommended Checklist}{11}{subsection.1.2.3}% 
+\contentsline {section}{\numberline {1.3}Example}{11}{section.1.3}% 
+\contentsline {subsection}{\numberline {1.3.1}Sharp RD}{11}{subsection.1.3.1}% 
+\contentsline {subsection}{\numberline {1.3.2}Fuzzy RD}{11}{subsection.1.3.2}% 

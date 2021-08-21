@@ -1,0 +1,135 @@
+%2multibyte Version: 5.50.0.2960 CodePage: 1252
+%Bibliography and citation formating
+% Custom date format for date field
+% Defining month year date format
+%\usepackage{tikz}                                        % Timelines and other drawings
+%\usetikzlibrary{decorations}                             % Formating for Tikz
+
+\documentclass[11pt]{book}%
+\usepackage[%dvipdfm,  %pdflatex,pdftex这里决定运行文件的方式不同
+%pdfstartview=FitH,
+%CJKbookmarks=true,\eqref{}
+%bookmarksnumbered=true,
+%bookmarksopen=true,
+colorlinks, %注释掉此项则交叉引用为彩色边框(将colorlinks和pdfborder同时注释掉)
+pdfborder=001,   %注释掉此项则交叉引用为彩色边框
+linkcolor=blue,
+anchorcolor=blue,
+citecolor=blue
+]{hyperref}  
+\usepackage{cite} 
+\usepackage{hyperref}
+\usepackage{float,booktabs} 
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{appendix}
+\usepackage{threeparttable}
+\usepackage{caption}
+\usepackage{sidecap}
+\usepackage{accents}
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{Codepage=1252}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Thursday, March 01, 2007 10:16:25}
+%TCIDATA{LastRevised=Monday, May 16, 2016 17:39:06}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Article">}
+%TCIDATA{Language=American English}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{assumption}{Assumption}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent \textbf{#1.} }{\  \rule{0.5em}{0.5em}}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newtheorem{defi}{Definition}
+\newtheorem{assu}{Assumption}
+\newtheorem{lem}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{corol}{Corollary}
+\geometry{left=0.8in, right=1.0in, top=1.0in, bottom=1.0in}
+\pagenumbering{arabic}
+\DeclareMathOperator*{\plim}{plim}
+\pagenumbering{arabic}
+\usepackage{authblk}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\title{Bunching}
+
+\author{Zhi  CAO}
+\affil{All suggestions are welcome: zhicao@link.cuhk.edu.hk}
+
+\date{
+\today
+}
+
+\maketitle
+
+\newpage
+\section*{Acknowledgement}
+ This note is adapted from the following literature and lecture notes:
+
+	\thispagestyle{empty}
+\newpage
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+
+\chapter{Bunching}
+\section{Introduction}
+The literature distinguishes between two conceptually different bunching designs. One type of design is based on kink points—discrete changes in the slope of choice sets—and was developed by Saez (2010) and Chetty et al. (2011). The other type of design is based on notch points—discrete changes in the level of choice sets—and was developed by Kleven \& Waseem (2013). In the context of taxes and transfers, the distinction corresponds to whether the discontinuity occurs in the marginal tax rate or in the average tax rate. Kinks and notches offer different empirical advantages and challenges, as discussed below, and they tend to feature in different types of settings. Although kinks are commonly observed in income redistribution policies (such as graduated income tax systems), notches are ubiquitous across a wide range of other tax and nontax settings.
+
+Bunching designs are related to two other research designs often used in empirical work: the regression discontinuity (RD) and the regression kink (RK) designs as laid out, for example, by Imbens \& Lemieux (2008) and Card et al. (2015). RD and RK designs essentially exploit notched and kinked incentives, respectively, but in situations in which the assignment variable—the variable that determines whether the agent is above or below the relevant threshold—is not subject to choice or manipulation. Bunching designs consider the opposite case, in which the assignment variable is a direct choice. In this sense, whenever we observe discrete jumps in incentives at specific thresholds, it is potentially possible to use either RD/RK designs or bunching designs, depending on the manipulability of the assignment variable. A complication in practice is that the manipulability of the assignment variable may not always be clearly determined, especially in situations with optimization frictions.
+
+The econometric study of nonlinear budget sets was initially developed by Burtless\& Hausman (1978) and Hausman (1981), who considered, respectively, labor supply responses to the negative income tax experiments and those to the federal income tax in the United States. They started from the observation that income tax and transfer systems create piecewise linear budget sets with two types of kink points. A convex kink point is created in which the marginal tax rate discretely increases (such as at bracket cutoffs in graduated income taxes), and a nonconvex kink point is created in which the marginal tax rate discretely falls (such as at points at which means-tested transfers are fully exhausted and no longer taxed away at the margin).  They parametrically estimated labor supply models in which workers locate either in the interior of a linear budget segment or at a convex kink point. This approach became very dominant during the 1980s and was applied to a wide range of government policies, such as income taxes, welfare programs, social insurance, and social security. A review of this literature is provided by Moffitt (1990). As discussed below, this approach is conceptually related to the recent bunching literature, which emphasizes the role of optimization frictions in creating a gap between observed elasticities and true structural elasticities (Chetty et al. 2011, Chetty 2012, Kleven \& Waseem 2013) and argues that the latter may be much larger than the former. 
+
+Where the two literatures diverge is in terms of empirical identification. In the nonlinear budget set literature, identification was achieved using a parametric model and making distributional assumptions on the two error terms. The presence of kinks and bunching (or their absence) was largely treated as a technical complication in fitting models to the data; the fact that kink points represent quasi-experimental variation in incentives and that bunching can be directly informative of responsiveness was not exploited. The recent literature, conversely, uses bunching directly to elicit behavioral responses and to estimate elasticities. Unlike the earlier literature, the recent bunching literature achieves identification only from what happens locally around the kink rather than from variation within brackets.
+
+\section{Kinks}
+
+
+
+
+\section{Notches}
+
+
+\newpage 
+%\bibliographystyle{plain}
+\bibliography{bibtex}
+\end{document}
+
